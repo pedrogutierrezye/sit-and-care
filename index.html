@@ -55,7 +55,19 @@
       <input class="w-full p-3 border border-gray-300 rounded" type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
       <textarea class="w-full p-3 border border-gray-300 rounded" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
       <button type="submit" class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-800">Absenden</button>
-    </form>
+    <form action="https://formsubmit.co/info@sitandcare.com" method="POST" class="space-y-4">
+  <input class="w-full p-3 border border-gray-300 rounded" type="text" name="name" placeholder="Ihr Name" required>
+  <input class="w-full p-3 border border-gray-300 rounded" type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+  <textarea class="w-full p-3 border border-gray-300 rounded" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+  
+  <!-- Optional hidden fields -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Neue Nachricht von Sit & Care Kontaktformular">
+  <input type="hidden" name="_next" value="https://www.sitandcare.com/thanks.html">
+
+  <button type="submit" class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-800">Absenden</button>
+</form>
+
   </div>
 </section>
 
