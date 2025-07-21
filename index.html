@@ -51,6 +51,10 @@
   <div class="container mx-auto max-w-2xl">
     <h3 class="text-2xl font-semibold mb-4">Kontakt</h3>
     <form action="https://formsubmit.co/info@sitandcare.com" method="POST" class="space-y-4">
+      
+      <!-- Honeypot field for spam protection -->
+      <input type="text" name="_honey" style="display:none">
+
       <input class="w-full p-3 border border-gray-300 rounded" type="text" name="name" placeholder="Ihr Name" required>
       <input class="w-full p-3 border border-gray-300 rounded" type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
       <textarea class="w-full p-3 border border-gray-300 rounded" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
@@ -64,6 +68,7 @@
     </form>
   </div>
 </section>
+
 
 
 <section id="blog" class="py-12 px-4">
