@@ -52,22 +52,24 @@
     <h3 class="text-2xl font-semibold mb-4">Kontakt</h3>
     <form action="https://formsubmit.co/info@sitandcare.com" method="POST" class="space-y-4">
       
-      <!-- Honeypot field for spam protection -->
+      <!-- Honeypot Field (spam protection) -->
       <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
 
+      <!-- Actual Form Fields -->
       <input class="w-full p-3 border border-gray-300 rounded" type="text" name="name" placeholder="Ihr Name" required>
       <input class="w-full p-3 border border-gray-300 rounded" type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
       <textarea class="w-full p-3 border border-gray-300 rounded" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
 
       <!-- Hidden Fields -->
       <input type="hidden" name="_subject" value="Neue Nachricht über Sit & Care">
-      <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://www.sitandcare.com/thanks.html">
 
       <button type="submit" class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-800">Absenden</button>
     </form>
   </div>
 </section>
+
 
 
 
