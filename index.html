@@ -58,29 +58,36 @@
     </div>
   </section>
 
-  <section id="contact" class="py-12 px-4 bg-gray-100">
-    <div class="container mx-auto">
-      <h3 class="text-2xl mb-4 font-semibold text-green-700">Kontakt</h3>
-      <p class="mb-6 max-w-2xl">Schreiben Sie uns über das Formular. Wir melden uns zeitnah zurück.</p>
+  <form
+  action="https://YOUR-ZOHO-FORMS-ENDPOINT/submit"
+  method="POST"
+  accept-charset="UTF-8"
+  class="grid gap-4 max-w-xl"
+  id="contactForm">
+  <!-- OPTIONAL: redirect after submit, if your Zoho form supports it -->
+  <input type="hidden" name="zf_redirect_url" value="https://sitandcare.com/thank-you.html">
 
-      <form id="contactForm" class="grid gap-4 max-w-xl" action="#" method="post" novalidate>
-        <div class="grid gap-2">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required class="border rounded px-3 py-2">
-        </div>
-        <div class="grid gap-2">
-          <label for="email">E-Mail</label>
-          <input id="email" name="email" type="email" required class="border rounded px-3 py-2">
-        </div>
-        <div class="grid gap-2">
-          <label for="message">Nachricht</label>
-          <textarea id="message" name="message" rows="5" required class="border rounded px-3 py-2"></textarea>
-        </div>
-        <button class="justify-self-start bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" type="submit">Senden</button>
-        <p id="status" class="text-sm"></p>
-      </form>
-    </div>
-  </section>
+  <div class="grid gap-2">
+    <label for="name">Name</label>
+    <input id="name" name="Name" type="text" required class="border rounded px-3 py-2">
+  </div>
+  <div class="grid gap-2">
+    <label for="email">E-Mail</label>
+    <input id="email" name="Email" type="email" required class="border rounded px-3 py-2">
+  </div>
+  <div class="grid gap-2">
+    <label for="message">Nachricht</label>
+    <textarea id="message" name="Message" rows="5" required class="border rounded px-3 py-2"></textarea>
+  </div>
+
+  <!-- Simple honeypot (spam protection) -->
+  <div style="position:absolute;left:-5000px;" aria-hidden="true">
+    <input type="text" name="website" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button class="justify-self-start bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" type="submit">Senden</button>
+</form>
+
 
   <footer class="py-8 px-4 text-center text-sm border-t bg-white">
     <div class="container mx-auto">
