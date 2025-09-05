@@ -6,14 +6,13 @@
   <title>Sit &amp; Care · Familiengeführter Service in Walldorf</title>
   <meta name="description" content="Familiengeführter Haus-, Tier-, Pflanzen- und Kinderbetreuungsservice in Walldorf (Umkreis 5 km). Zuverlässig, freundlich und lokal.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .container { max-width: 960px; }
-  </style>
+  <style>.container{max-width:960px}</style>
 </head>
 <body class="antialiased text-slate-800">
+  <!-- Header -->
   <header class="border-b bg-white">
     <div class="mx-auto container px-4 py-4 flex items-center justify-between">
-      <a href="#" class="text-xl font-bold text-green-700">Sit &amp; Care</a>
+      <a href="/" class="text-xl font-bold text-green-700">Sit &amp; Care</a>
       <button id="menuBtn" class="md:hidden px-3 py-2 border rounded text-green-700 border-green-700" aria-label="Menü öffnen/schließen">Menü</button>
       <nav id="nav" class="hidden md:block">
         <ul class="md:flex md:items-center md:space-x-6">
@@ -26,11 +25,13 @@
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="text-center py-16 px-4 bg-green-600 text-white">
     <h1 class="text-3xl md:text-4xl mb-4 font-bold">Ihr Familien-Team für Betreuung in Walldorf</h1>
     <p class="mx-auto max-w-2xl text-lg">Zuverlässige Haus-, Tier-, Pflanzen- und Kinderbetreuung im Umkreis von 5&nbsp;km. Persönlich, freundlich und lokal.</p>
   </section>
 
+  <!-- About -->
   <section id="about" class="py-12 px-4 bg-white">
     <div class="container mx-auto text-lg">
       <h2 class="text-2xl mb-3 font-semibold text-green-700">Über uns</h2>
@@ -38,6 +39,7 @@
     </div>
   </section>
 
+  <!-- Motivation -->
   <section id="motivation" class="py-12 px-4 bg-gray-100">
     <div class="container mx-auto text-lg">
       <h2 class="text-2xl mb-3 font-semibold text-green-700">Warum wir das machen</h2>
@@ -45,6 +47,7 @@
     </div>
   </section>
 
+  <!-- Services -->
   <section id="services" class="py-12 px-4 bg-white">
     <div class="container mx-auto text-lg">
       <h3 class="text-2xl mb-4 font-semibold text-green-700">Unsere Leistungen</h3>
@@ -58,37 +61,44 @@
     </div>
   </section>
 
-  <form
-  action="https://YOUR-ZOHO-FORMS-ENDPOINT/submit"
-  method="POST"
-  accept-charset="UTF-8"
-  class="grid gap-4 max-w-xl"
-  id="contactForm">
-  <!-- OPTIONAL: redirect after submit, if your Zoho form supports it -->
-  <input type="hidden" name="zf_redirect_url" value="https://sitandcare.com/thank-you.html">
+  <!-- Contact -->
+  <section id="contact" class="py-12 px-4 bg-gray-100">
+    <div class="container mx-auto">
+      <h3 class="text-2xl mb-4 font-semibold text-green-700">Kontakt</h3>
+      <p class="mb-6 max-w-2xl">Schreiben Sie uns über das Formular. Wir melden uns in Kürze zurück.</p>
 
-  <div class="grid gap-2">
-    <label for="name">Name</label>
-    <input id="name" name="Name" type="text" required class="border rounded px-3 py-2">
-  </div>
-  <div class="grid gap-2">
-    <label for="email">E-Mail</label>
-    <input id="email" name="Email" type="email" required class="border rounded px-3 py-2">
-  </div>
-  <div class="grid gap-2">
-    <label for="message">Nachricht</label>
-    <textarea id="message" name="Message" rows="5" required class="border rounded px-3 py-2"></textarea>
-  </div>
+      <!-- Use your real Zoho endpoint below -->
+      <form
+        action="https://YOUR-ZOHO-FORMS-ENDPOINT/submit"
+        method="POST"
+        accept-charset="UTF-8"
+        class="grid gap-4 max-w-xl"
+        id="contactForm">
+        <input type="hidden" name="zf_redirect_url" value="https://sitandcare.com/thank-you.html">
 
-  <!-- Simple honeypot (spam protection) -->
-  <div style="position:absolute;left:-5000px;" aria-hidden="true">
-    <input type="text" name="website" tabindex="-1" autocomplete="off">
-  </div>
+        <div class="grid gap-2">
+          <label for="name">Name</label>
+          <input id="name" name="Name" type="text" required class="border rounded px-3 py-2">
+        </div>
+        <div class="grid gap-2">
+          <label for="email">E-Mail</label>
+          <input id="email" name="Email" type="email" required class="border rounded px-3 py-2">
+        </div>
+        <div class="grid gap-2">
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="Message" rows="5" required class="border rounded px-3 py-2"></textarea>
+        </div>
 
-  <button class="justify-self-start bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" type="submit">Senden</button>
-</form>
+        <div style="position:absolute;left:-5000px;" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
 
+        <button class="justify-self-start bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" type="submit">Senden</button>
+      </form>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer class="py-8 px-4 text-center text-sm border-t bg-white">
     <div class="container mx-auto">
       <p>© <span id="year"></span> Sit &amp; Care · Walldorf</p>
@@ -97,39 +107,13 @@
   </footer>
 
   <script>
+    // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
     const nav = document.getElementById('nav');
-    menuBtn?.addEventListener('click', () => {
-      nav.classList.toggle('hidden');
-    });
+    menuBtn?.addEventListener('click', () => nav.classList.toggle('hidden'));
 
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    const FORM_ENDPOINT = ""; // set Zoho endpoint here
-    const form = document.getElementById('contactForm');
-    const statusEl = document.getElementById('status');
-
-    form?.addEventListener('submit', async (e) => {
-      if (!FORM_ENDPOINT) {
-        e.preventDefault();
-        statusEl.textContent = "Formular ist lokal aktiv. Bitte konfigurieren Sie das Backend-Ziel (Zoho) im Code.";
-        return;
-      }
-      e.preventDefault();
-      statusEl.textContent = "Sende…";
-      try {
-        const formData = new FormData(form);
-        const res = await fetch(FORM_ENDPOINT, { method: "POST", body: formData });
-        if (res.ok) {
-          statusEl.textContent = "Danke! Ihre Nachricht wurde gesendet.";
-          form.reset();
-        } else {
-          statusEl.textContent = "Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut.";
-        }
-      } catch (err) {
-        statusEl.textContent = "Netzwerkfehler. Bitte später erneut versuchen.";
-      }
-    });
   </script>
 </body>
 </html>
