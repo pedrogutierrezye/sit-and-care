@@ -1,102 +1,128 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sit & Care – Haus-, Tier- und Pflanzenbetreuung in Walldorf</title>
-  <meta name="description" content="Sit & Care bietet zuverlässige Haus-, Tier- und Pflanzenbetreuung in Walldorf und Umgebung. Familiengeführter Service mit Vertrauen und Herz." />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2GP55QY3BX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-2GP55QY3BX');
-</script>
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sit &amp; Care · Familiengeführter Service in Walldorf</title>
+  <meta name="description" content="Familiengeführter Haus-, Tier- und Pflanzenbetreuungsservice in Walldorf (Umkreis 5 km). Zuverlässig, freundlich und lokal.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .container { max-width: 960px; }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="antialiased text-slate-800">
+  <!-- Header / Nav -->
+  <header class="border-b bg-white">
+    <div class="mx-auto container px-4 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-green-700">Sit &amp; Care</a>
+      <button id="menuBtn" class="md:hidden px-3 py-2 border rounded text-green-700 border-green-700" aria-label="Menü öffnen/schließen">Menü</button>
+      <nav id="nav" class="hidden md:block">
+        <ul class="md:flex md:items-center md:space-x-6">
+          <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#about">Über uns</a></li>
+          <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#services">Leistungen</a></li>
+          <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<header class="bg-green-700 text-white p-6 shadow-md">
-  <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Sit & Care</h1>
-    <nav>
-      <ul class="flex space-x-4 text-sm">
-        <li><a href="#about" class="hover:underline">Über Uns</a></li>
-        <li><a href="#services" class="hover:underline">Leistungen</a></li>
-        <li><a href="#contact" class="hover:underline">Kontakt</a></li>
-        <li><a href="#blog" class="hover:underline">Blog</a></li>
+  <!-- Hero -->
+  <section class="text-center py-16 px-4 bg-green-600 text-white">
+    <h1 class="text-3xl md:text-4xl mb-4 font-bold">Ihr Familien-Team für Betreuung in Walldorf</h1>
+    <p class="mx-auto max-w-2xl text-lg">Zuverlässige Haus-, Tier- und Pflanzenbetreuung im Umkreis von 5&nbsp;km. Persönlich, freundlich und lokal – damit Sie beruhigt verreisen können.</p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-12 px-4 bg-white">
+    <div class="container mx-auto text-lg">
+      <h2 class="text-2xl mb-3 font-semibold text-green-700">Über uns</h2>
+      <p>Sit &amp; Care ist ein familiengeführtes Angebot aus Walldorf. Gemeinsam als Eltern und Kinder kümmern wir uns zuverlässig und mit Herz um Häuser, Haustiere und Pflanzen in unserer Nachbarschaft.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-12 px-4 bg-gray-100">
+    <div class="container mx-auto text-lg">
+      <h3 class="text-2xl mb-4 font-semibold text-green-700">Unsere Leistungen</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Haussitting – regelmäßige Kontrolle, Lüften, Briefkastenleerung</li>
+        <li>Tierbetreuung – Füttern, Spazierengehen, Spielen</li>
+        <li>Pflanzenpflege – Gießen von Zimmer- und Balkonpflanzen</li>
+        <li>Schlüsselservice – sichere Übergabe und Verwahrung</li>
       </ul>
-    </nav>
-  </div>
-</header>
+    </div>
+  </section>
 
-<section class="text-center py-16 px-4">
-  <h2 class="text-4xl font-bold mb-4">Ihr Familien-Team für Betreuung in Walldorf</h2>
-  <p class="max-w-2xl mx-auto text-lg">Zuverlässige Haus-, Tier- und Pflanzenbetreuung im Umkreis von 5 km. Vertrauen Sie auf persönliche und liebevolle Betreuung, wenn Sie verreisen.</p>
-</section>
+  <!-- Contact -->
+  <section id="contact" class="py-12 px-4 bg-white">
+    <div class="container mx-auto">
+      <h3 class="text-2xl mb-4 font-semibold text-green-700">Kontakt</h3>
+      <p class="mb-6 max-w-2xl">Schreiben Sie uns über das Formular. Wir melden uns zeitnah zurück.</p>
 
-<section id="about"
-    <div class="container mx-auto max-w-3xl text-lg">
-  <h2>Über uns</h2>
-  <p>Sit & Care ist ein familiengeführtes Unternehmen aus Walldorf. Gemeinsam als Eltern und Kinder kümmern wir uns zuverlässig und mit Herz um Häuser, Haustiere und Pflanzen in unserer Nachbarschaft.</p>
-  </div>
-</section>
+      <form id="contactForm" class="grid gap-4 max-w-xl" action="#" method="post" novalidate>
+        <div class="grid gap-2">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required class="border rounded px-3 py-2">
+        </div>
+        <div class="grid gap-2">
+          <label for="email">E-Mail</label>
+          <input id="email" name="email" type="email" required class="border rounded px-3 py-2">
+        </div>
+        <div class="grid gap-2">
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" rows="5" required class="border rounded px-3 py-2"></textarea>
+        </div>
+        <button class="justify-self-start bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" type="submit">Senden</button>
+        <p id="status" class="text-sm"></p>
+      </form>
+    </div>
+  </section>
 
-<section id="services" class="py-12 px-4">
-  <div class="container mx-auto max-w-3xl text-lg">
-    <h3 class="text-2xl font-semibold mb-4">Unsere Leistungen</h3>
-    <ul class="list-disc pl-6 space-y-2">
-      <li>Haussitting – regelmäßige Kontrolle, Lüften, Briefkastenleerung</li>
-      <li>Tierbetreuung – Füttern, Spazierengehen, Spielen</li>
-      <li>Pflanzenpflege – Gießen von Zimmer- und Balkonpflanzen</li>
-      <li>Schlüsselservice – sichere Übergabe und Verwahrung</li>
-    </ul>
-  </div>
-</section>
+  <!-- Footer -->
+  <footer class="py-8 px-4 text-center text-sm border-t bg-gray-100">
+    <div class="container mx-auto">
+      <p>© <span id="year"></span> Sit &amp; Care · Walldorf</p>
+      <p class="mt-2">Impressum · Datenschutz</p>
+    </div>
+  </footer>
 
-<section id="contact" class="bg-gray-100 py-12 px-4">
-  <div class="container mx-auto max-w-2xl">
-    <h3 class="text-2xl font-semibold mb-4">Kontakt</h3>
-    <form action="https://formsubmit.co/info@sitandcare.com" method="POST" class="space-y-4">
-      
-      <!-- Honeypot Field (spam protection) -->
-      <input type="text" name="_honey" style="display:none">
-      <input type="hidden" name="_captcha" value="false">
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+    menuBtn?.addEventListener('click', () => {
+      nav.classList.toggle('hidden');
+    });
 
-      <!-- Actual Form Fields -->
-      <input class="w-full p-3 border border-gray-300 rounded" type="text" name="name" placeholder="Ihr Name" required>
-      <input class="w-full p-3 border border-gray-300 rounded" type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
-      <textarea class="w-full p-3 border border-gray-300 rounded" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-      <!-- Hidden Fields -->
-      <input type="hidden" name="_subject" value="Neue Nachricht über Sit & Care">
-      <input type="hidden" name="_next" value="https://www.sitandcare.com/thanks.html">
+    // Form handler placeholder
+    const FORM_ENDPOINT = ""; // add Zoho endpoint here
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('status');
 
-      <button type="submit" class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-800">Absenden</button>
-    </form>
-  </div>
-</section>
-
-
-
-
-<section id="blog" class="py-12 px-4">
-  <div class="container mx-auto max-w-3xl text-lg">
-    <h3 class="text-2xl font-semibold mb-4">Blog</h3>
-    <ul class="list-disc pl-6 space-y-2">
-      <li><a href="#" class="text-green-700 hover:underline">Warum Haussitting in Walldorf sinnvoll ist</a></li>
-      <li><a href="#" class="text-green-700 hover:underline">Wie Sie Ihr Zuhause auf den Urlaub vorbereiten</a></li>
-      <li><a href="#" class="text-green-700 hover:underline">Tipps zur Pflanzenpflege bei längerer Abwesenheit</a></li>
-    </ul>
-  </div>
-</section>
-
-<footer class="bg-green-700 text-white text-center py-6 mt-10 text-sm">
-  &copy; 2025 Sit & Care – Walldorf. All rights reserved.
-</footer>
-
+    form?.addEventListener('submit', async (e) => {
+      if (!FORM_ENDPOINT) {
+        e.preventDefault();
+        statusEl.textContent = "Formular ist lokal aktiv. Bitte konfigurieren Sie das Backend-Ziel (Zoho) im Code.";
+        return;
+      }
+      e.preventDefault();
+      statusEl.textContent = "Sende…";
+      try {
+        const formData = new FormData(form);
+        const res = await fetch(FORM_ENDPOINT, { method: "POST", body: formData });
+        if (res.ok) {
+          statusEl.textContent = "Danke! Ihre Nachricht wurde gesendet.";
+          form.reset();
+        } else {
+          statusEl.textContent = "Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut.";
+        }
+      } catch (err) {
+        statusEl.textContent = "Netzwerkfehler. Bitte später erneut versuchen.";
+      }
+    });
+  </script>
 </body>
 </html>
