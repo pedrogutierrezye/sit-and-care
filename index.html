@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sit &amp; Care · Familiengeführter Service in Walldorf</title>
-  <meta name="description" content="Familiengeführter Haus-, Tier-, Pflanzen- und Kinderbetreuungsservice in Walldorf (Umkreis 5 km). Zuverlässig, freundlich und lokal.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sit &amp; Care · Haus-, Tier-, Pflanzen- & Kinderbetreuung in Walldorf</title>
+  <meta name="description" content="Familiengeführter Haus-, Tier-, Pflanzen- und Kinderbetreuungsservice in Walldorf (Umkreis 5 km). Zuverlässig, freundlich und lokal." />
+
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://www.sitandcare.com/" />
+  <link rel="alternate" href="https://www.sitandcare.com/" hreflang="de" />
+  <link rel="alternate" href="https://www.sitandcare.com/en.html" hreflang="en" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Sit & Care – Betreuung in Walldorf" />
+  <meta property="og:description" content="Zuverlässige Haus-, Tier-, Pflanzen- und Kinderbetreuung im Umkreis von 5 km." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sitandcare.com/" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>.container{max-width:960px}</style>
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Sit & Care",
+    "areaServed":"Walldorf (5 km)",
+    "address":{"@type":"PostalAddress","addressLocality":"Walldorf","addressCountry":"DE"},
+    "email":"info@sitandcare.com",
+    "url":"https://www.sitandcare.com"
+  }
+  </script>
+
+  <!-- Google Analytics 4 (replace G-XXXXXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    if ("G-XXXXXXXXXX" !== "G-XXXXXXXXXX") {
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    }
+  </script>
 </head>
 <body class="antialiased text-slate-800">
   <!-- Header -->
@@ -20,6 +59,7 @@
           <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#motivation">Warum</a></li>
           <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#services">Leistungen</a></li>
           <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#contact">Kontakt</a></li>
+          <li class="md:ml-6"><a class="block py-2 md:py-0 text-slate-600 hover:underline" href="/en.html" hreflang="en">EN</a></li>
         </ul>
       </nav>
     </div>
@@ -58,6 +98,7 @@
         <li>Babysitting – liebevolle Betreuung Ihrer Kinder für kurze oder längere Zeiträume</li>
         <li>Schlüsselservice – sichere Übergabe und Verwahrung</li>
       </ul>
+      <p class="mt-4">Servicegebiet: Walldorf und Umgebung (5&nbsp;km).</p>
     </div>
   </section>
 
@@ -67,33 +108,28 @@
       <h3 class="text-2xl mb-4 font-semibold text-green-700">Kontakt</h3>
       <p class="mb-6 max-w-2xl">Schreiben Sie uns über das Formular. Wir melden uns in Kürze zurück.</p>
 
-      <!-- Use your real Zoho endpoint below -->
-      <form
-        action="https://YOUR-ZOHO-FORMS-ENDPOINT/submit"
-        method="POST"
-        accept-charset="UTF-8"
-        class="grid gap-4 max-w-xl"
-        id="contactForm">
-        <input type="hidden" name="zf_redirect_url" value="https://sitandcare.com/thank-you.html">
-
+      <!-- JS-driven submit to /api/contact (Part 2 will add this endpoint) -->
+      <form class="grid gap-4 max-w-xl" id="contactForm" novalidate>
         <div class="grid gap-2">
           <label for="name">Name</label>
-          <input id="name" name="Name" type="text" required class="border rounded px-3 py-2">
+          <input id="name" name="name" type="text" required class="border rounded px-3 py-2">
         </div>
         <div class="grid gap-2">
           <label for="email">E-Mail</label>
-          <input id="email" name="Email" type="email" required class="border rounded px-3 py-2">
+          <input id="email" name="email" type="email" required class="border rounded px-3 py-2">
         </div>
         <div class="grid gap-2">
           <label for="message">Nachricht</label>
-          <textarea id="message" name="Message" rows="5" required class="border rounded px-3 py-2"></textarea>
+          <textarea id="message" name="message" rows="5" required class="border rounded px-3 py-2"></textarea>
         </div>
 
+        <!-- Honeypot -->
         <div style="position:absolute;left:-5000px;" aria-hidden="true">
           <input type="text" name="website" tabindex="-1" autocomplete="off">
         </div>
 
         <button class="justify-self-start bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" type="submit">Senden</button>
+        <p id="formStatus" class="text-sm text-slate-600"></p>
       </form>
     </div>
   </section>
@@ -102,7 +138,11 @@
   <footer class="py-8 px-4 text-center text-sm border-t bg-white">
     <div class="container mx-auto">
       <p>© <span id="year"></span> Sit &amp; Care · Walldorf</p>
-      <p class="mt-2">Impressum · Datenschutz</p>
+      <p class="mt-2">
+        <a href="/impressum.html" class="underline">Impressum</a>
+        <span class="mx-1">·</span>
+        <a href="/datenschutz.html" class="underline">Datenschutz</a>
+      </p>
     </div>
   </footer>
 
@@ -114,6 +154,45 @@
 
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form handler (POST -> /api/contact)
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = 'Senden …';
+
+      const payload = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim(),
+        honeypot: form.website.value.trim()
+      };
+
+      // Simple front-end validation
+      if (!payload.name || !payload.email || !payload.message) {
+        statusEl.textContent = 'Bitte alle Felder ausfüllen.';
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          statusEl.textContent = 'Danke! Wir melden uns in Kürze.';
+          form.reset();
+        } else {
+          statusEl.textContent = 'Es gab ein Problem. Bitte versuchen Sie es später erneut.';
+        }
+      } catch (err) {
+        statusEl.textContent = 'Netzwerkfehler. Bitte später erneut versuchen.';
+      }
+    });
   </script>
 </body>
 </html>
