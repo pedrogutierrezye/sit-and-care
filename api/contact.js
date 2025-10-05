@@ -9,49 +9,45 @@ export default async function handler(req, res) {
 
   try {
     const { name, email, message, honeypot } = req.body || {};
+
+    // Simple bot honeypot
     if (honeypot) return res.status(200).json({ ok: true });
+
+    // Basic validation
     if (!name || !email || !message) {
       return res.status(400).json({ ok: false, error: "Missing fields" });
     }
 
+    // Create transporter (Zoho SMTP)
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,          // e.g. smtp.zoho.eu
       port: Number(process.env.SMTP_PORT),  // e.g. 465
       secure: String(process.env.SMTP_SECURE).toLowerCase() === "true",
-      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
+      auth: {
+        user: process.env.SMTP_USER,        // e.g. contact@pedrogutierrez.pro
+        pass: process.env.SMTP_PASS         // Zoho app password
+      }
     });
 
-    // Optional: uncomment to verify SMTP credentials on each call during testing
+    // Optional: uncomment to verify connection during testing
     // await transporter.verify();
 
-    // 1) Owner notification (add replyTo + optional CC/BCC)
+    // 1) Send owner notification
     await transporter.sendMail({
-      from: process.env.MAIL_FROM,  // MUST match your Zoho mailbox
-      to: process.env.MAIL_TO,
-      cc: process.env.MAIL_CC || undefined,    // optional env var
-      bcc: process.env.MAIL_BCC || undefined,  // optional env var
-      replyTo: email, // reply goes to the customer
+      from: process.env.MAIL_FROM,   // "Sit & Care <contact@pedrogutierrez.pro>"
+      to: process.env.MAIL_TO,       // Main inbox for inquiries
+      cc: process.env.MAIL_CC || undefined,   // Optional CC
+      bcc: process.env.MAIL_BCC || undefined, // Optional BCC
+      replyTo: email,                // When you hit reply, it goes to the customer
       subject: `Neue Anfrage – Sit & Care: ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`
     });
 
-    // 2) Auto-reply to the customer
+    // 2) Send auto-reply to customer
     await transporter.sendMail({
       from: process.env.MAIL_FROM,
       to: email,
       subject: "Danke für Ihre Nachricht – Sit & Care",
       text: `Hallo ${name},
 
-vielen Dank für Ihre Nachricht an Sit & Care. Wir melden uns in Kürze zurück.
-
-Herzliche Grüße
-Sit & Care, Walldorf`
-    });
-
-    return res.status(200).json({ ok: true });
-  } catch (err) {
-    console.error(err);
-    // Surface the real error during setup; swap back to generic once stable
-    return res.status(500).json({ ok: false, error: String(err?.message || err) });
-  }
-}
+vielen Dank für Ihre Nachricht an Sit & Care. Wir melde
