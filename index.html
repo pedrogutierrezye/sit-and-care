@@ -728,8 +728,7 @@
           });
 
           if (res.ok) {
-            statusEl.textContent = "Danke! Wir melden uns in Kürze.";
-            form.reset();
+            window.location.href = "/thanks.html";
           } else {
             statusEl.textContent =
               "Es gab ein Problem. Bitte versuchen Sie es später erneut.";

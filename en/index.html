@@ -718,8 +718,7 @@
           });
 
           if (res.ok) {
-            statusEl.textContent = "Thank you! We'll be in touch shortly.";
-            form.reset();
+            window.location.href = "/en/thanks.html";
           } else {
             statusEl.textContent =
               "Something went wrong. Please try again later.";
