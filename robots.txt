@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Legal and transient pages — handled with noindex meta tags
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+Disallow: /thanks.html
+Disallow: /en/privacy.html
+Disallow: /en/thanks.html
+
+Sitemap: https://www.sitandcare.com/sitemap.xml
