@@ -1,13 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Danke!</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-white text-gray-800 font-sans text-center py-20 px-4">
-  <h1 class="text-3xl font-bold mb-4">Vielen Dank für Ihre Nachricht!</h1>
-  <p class="text-lg">Wir melden uns so schnell wie möglich bei Ihnen.</p>
-  <a href="/" class="mt-6 inline-block text-green-700 hover:underline">Zurück zur Startseite</a>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vielen Dank! | Sit &amp; Care</title>
+    <meta name="robots" content="noindex" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f4f8f3",
+                100: "#deeeda",
+                200: "#bed9b8",
+                300: "#97bf8f",
+                500: "#6e9e66",
+                600: "#5a8a52",
+                700: "#4a7343",
+                800: "#385933",
+                900: "#243b21",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+      }
+      .container {
+        max-width: 960px;
+      }
+    </style>
+  </head>
+  <body class="antialiased bg-white text-slate-800">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100 shadow-sm"
+    >
+      <div
+        class="mx-auto container px-4 py-3 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="flex items-center gap-2.5 text-xl font-bold text-brand-700 tracking-tight"
+        >
+          <img
+            src="img/logo.png"
+            alt=""
+            class="h-10 w-auto"
+            aria-hidden="true"
+          />
+          Sit &amp; Care
+        </a>
+        <button
+          id="menuBtn"
+          class="md:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors"
+          aria-label="Menü öffnen/schließen"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M3 5h14M3 10h14M3 15h14" />
+          </svg>
+        </button>
+        <nav id="desktopNav" class="hidden md:block">
+          <ul class="flex items-center gap-1">
+            <li>
+              <a
+                class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-brand-50 transition-colors"
+                href="/#about"
+                >Über uns</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-brand-50 transition-colors"
+                href="/#motivation"
+                >Warum</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-brand-50 transition-colors"
+                href="/#services"
+                >Leistungen</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-brand-50 transition-colors"
+                href="/#contact"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        id="mobileNav"
+        class="hidden md:hidden border-t border-slate-100 bg-white px-4 py-2"
+      >
+        <ul class="space-y-0.5">
+          <li>
+            <a
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-brand-50 transition-colors"
+              href="/#about"
+              >Über uns</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-brand-50 transition-colors"
+              href="/#motivation"
+              >Warum wir das machen</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-brand-50 transition-colors"
+              href="/#services"
+              >Leistungen</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-700 hover:bg-brand-50 transition-colors"
+              href="/#contact"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Thank you content -->
+    <main
+      class="flex flex-col items-center justify-center px-4 py-32 text-center"
+    >
+      <div
+        class="w-16 h-16 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center mb-6"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 6L9 17l-5-5" />
+        </svg>
+      </div>
+      <h1 class="text-3xl font-bold text-slate-800 mb-3">
+        Vielen Dank für Ihre Nachricht!
+      </h1>
+      <p class="text-lg text-slate-500 mb-8 max-w-md">
+        Wir melden uns so schnell wie möglich bei Ihnen.
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 bg-brand-700 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-brand-800 transition-colors"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M13 8H3M7 4L3 8l4 4" />
+        </svg>
+        Zurück zur Startseite
+      </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-slate-900 text-slate-400">
+      <div
+        class="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm"
+      >
+        <a href="/" class="flex items-center gap-2 text-white font-semibold">
+          <img
+            src="img/logo.png"
+            alt="Sit &amp; Care"
+            class="h-8 w-auto brightness-0 invert"
+          />
+          Sit &amp; Care
+        </a>
+        <p>© <span id="year"></span> Sit &amp; Care · Walldorf</p>
+        <p class="flex gap-5">
+          <a href="/impressum.html" class="hover:text-white transition-colors"
+            >Impressum</a
+          >
+          <a href="/datenschutz.html" class="hover:text-white transition-colors"
+            >Datenschutz</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("menuBtn")
+        ?.addEventListener("click", () =>
+          document.getElementById("mobileNav").classList.toggle("hidden"),
+        );
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
