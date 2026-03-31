@@ -1,198 +1,714 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Sit &amp; Care · Haus-, Tier-, Pflanzen- & Kinderbetreuung in Walldorf</title>
-  <meta name="description" content="Familiengeführter Haus-, Tier-, Pflanzen- und Kinderbetreuungsservice in Walldorf (Umkreis 5 km). Zuverlässig, freundlich und lokal." />
+    <title>
+      Sit &amp; Care · Haus-, Tier-, Pflanzen- & Kinderbetreuung in Walldorf
+    </title>
+    <meta
+      name="description"
+      content="Familiengeführter Haus-, Tier-, Pflanzen- und Kinderbetreuungsservice in Walldorf (Umkreis 5 km). Zuverlässig, freundlich und lokal."
+    />
 
-  <!-- Canonical + hreflang -->
-  <link rel="canonical" href="https://www.sitandcare.com/" />
-  <link rel="alternate" href="https://www.sitandcare.com/" hreflang="de" />
-  <link rel="alternate" href="https://www.sitandcare.com/en.html" hreflang="en" />
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href="https://www.sitandcare.com/" />
+    <link rel="alternate" href="https://www.sitandcare.com/" hreflang="de" />
+    <link
+      rel="alternate"
+      href="https://www.sitandcare.com/en.html"
+      hreflang="en"
+    />
 
-  <!-- Social preview -->
-  <meta property="og:title" content="Sit & Care – Betreuung in Walldorf" />
-  <meta property="og:description" content="Zuverlässige Haus-, Tier-, Pflanzen- und Kinderbetreuung im Umkreis von 5 km." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.sitandcare.com/" />
-  <meta name="twitter:card" content="summary" />
+    <!-- Social preview -->
+    <meta property="og:title" content="Sit & Care – Betreuung in Walldorf" />
+    <meta
+      property="og:description"
+      content="Zuverlässige Haus-, Tier-, Pflanzen- und Kinderbetreuung im Umkreis von 5 km."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.sitandcare.com/" />
+    <meta name="twitter:card" content="summary" />
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>.container{max-width:960px}</style>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- LocalBusiness structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Sit & Care",
-    "areaServed":"Walldorf (5 km)",
-    "address":{"@type":"PostalAddress","addressLocality":"Walldorf","addressCountry":"DE"},
-    "email":"info@sitandcare.com",
-    "url":"https://www.sitandcare.com"
-  }
-  </script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+      }
+      .container {
+        max-width: 960px;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
 
-  <!-- Google Analytics 4 (replace G-XXXXXXXXXX) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    if ("G-XXXXXXXXXX" !== "G-XXXXXXXXXX") {
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    }
-  </script>
-</head>
-<body class="antialiased text-slate-800">
-  <!-- Header -->
-  <header class="border-b bg-white">
-    <div class="mx-auto container px-4 py-4 flex items-center justify-between">
-      <a href="/" class="text-xl font-bold text-green-700">Sit &amp; Care</a>
-      <button id="menuBtn" class="md:hidden px-3 py-2 border rounded text-green-700 border-green-700" aria-label="Menü öffnen/schließen">Menü</button>
-      <nav id="nav" class="hidden md:block">
-        <ul class="md:flex md:items-center md:space-x-6">
-          <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#about">Über uns</a></li>
-          <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#motivation">Warum</a></li>
-          <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#services">Leistungen</a></li>
-          <li><a class="block py-2 md:py-0 text-green-700 hover:underline" href="#contact">Kontakt</a></li>
-          <li class="md:ml-6"><a class="block py-2 md:py-0 text-slate-600 hover:underline" href="/en.html" hreflang="en">EN</a></li>
+    <!-- LocalBusiness structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Sit & Care",
+        "areaServed": "Walldorf (5 km)",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Walldorf",
+          "addressCountry": "DE"
+        },
+        "email": "info@sitandcare.com",
+        "url": "https://www.sitandcare.com"
+      }
+    </script>
+
+    <!-- Google Analytics 4 (replace G-XXXXXXXXXX) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      if ("G-XXXXXXXXXX" !== "G-XXXXXXXXXX") {
+        gtag("js", new Date());
+        gtag("config", "G-XXXXXXXXXX");
+      }
+    </script>
+  </head>
+  <body class="antialiased bg-white text-slate-800">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100 shadow-sm"
+    >
+      <div
+        class="mx-auto container px-4 py-3 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="flex items-center gap-2.5 text-xl font-bold text-emerald-700 tracking-tight"
+        >
+          <span
+            class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 text-sm font-bold select-none"
+            >S</span
+          >
+          Sit &amp; Care
+        </a>
+        <button
+          id="menuBtn"
+          class="md:hidden p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors"
+          aria-label="Menü öffnen/schließen"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M3 5h14M3 10h14M3 15h14" />
+          </svg>
+        </button>
+        <nav id="desktopNav" class="hidden md:block">
+          <ul class="flex items-center gap-1">
+            <li>
+              <a
+                class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+                href="#about"
+                >Über uns</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+                href="#motivation"
+                >Warum</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+                href="#services"
+                >Leistungen</a
+              >
+            </li>
+            <li>
+              <a
+                class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+                href="#contact"
+                >Kontakt</a
+              >
+            </li>
+            <li class="ml-2 pl-2 border-l border-slate-200">
+              <a
+                class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-600 transition-colors"
+                href="/en.html"
+                hreflang="en"
+                >EN</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Mobile nav dropdown -->
+      <div
+        id="mobileNav"
+        class="hidden md:hidden border-t border-slate-100 bg-white px-4 py-2"
+      >
+        <ul class="space-y-0.5">
+          <li>
+            <a
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+              href="#about"
+              >Über uns</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+              href="#motivation"
+              >Warum wir das machen</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+              href="#services"
+              >Leistungen</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+              href="#contact"
+              >Kontakt</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-600 transition-colors"
+              href="/en.html"
+              hreflang="en"
+              >English</a
+            >
+          </li>
         </ul>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </header>
 
-  <!-- Hero -->
-  <section class="text-center py-16 px-4 bg-green-600 text-white">
-    <h1 class="text-3xl md:text-4xl mb-4 font-bold">Ihr Familien-Team für Betreuung in Walldorf</h1>
-    <p class="mx-auto max-w-2xl text-lg">Zuverlässige Haus-, Tier-, Pflanzen- und Kinderbetreuung im Umkreis von 5&nbsp;km. Persönlich, freundlich und lokal.</p>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="py-12 px-4 bg-white">
-    <div class="container mx-auto text-lg">
-      <h2 class="text-2xl mb-3 font-semibold text-green-700">Über uns</h2>
-      <p>Sit &amp; Care ist ein familiengeführtes Angebot aus Walldorf. Gemeinsam als Eltern und Kinder kümmern wir uns zuverlässig und mit Herz um Häuser, Haustiere, Pflanzen und die liebevolle Betreuung von Kindern in unserer Nachbarschaft.</p>
-    </div>
-  </section>
-
-  <!-- Motivation -->
-  <section id="motivation" class="py-12 px-4 bg-gray-100">
-    <div class="container mx-auto text-lg">
-      <h2 class="text-2xl mb-3 font-semibold text-green-700">Warum wir das machen</h2>
-      <p>Unsere Kinder möchten etwas Eigenes aufbauen und dabei Verantwortung übernehmen. Mit Sit &amp; Care verbinden wir Nützliches mit Sinnvollem: Wir unterstützen Nachbarn und Familien in Walldorf und Umgebung und die Kinder können sich ein Taschengeld verdienen, um ihren Traum vom Studium im Ausland zu verwirklichen.</p>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-12 px-4 bg-white">
-    <div class="container mx-auto text-lg">
-      <h3 class="text-2xl mb-4 font-semibold text-green-700">Unsere Leistungen</h3>
-      <ul class="list-disc pl-6 space-y-2">
-        <li>Haussitting – regelmäßige Kontrolle, Lüften, Briefkastenleerung</li>
-        <li>Tierbetreuung – Füttern, Spazierengehen, Spielen</li>
-        <li>Pflanzenpflege – Gießen von Zimmer- und Balkonpflanzen</li>
-        <li>Babysitting – liebevolle Betreuung Ihrer Kinder für kurze oder längere Zeiträume</li>
-        <li>Schlüsselservice – sichere Übergabe und Verwahrung</li>
-      </ul>
-      <p class="mt-4">Servicegebiet: Walldorf und Umgebung (5&nbsp;km).</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-12 px-4 bg-gray-100">
-    <div class="container mx-auto">
-      <h3 class="text-2xl mb-4 font-semibold text-green-700">Kontakt</h3>
-      <p class="mb-6 max-w-2xl">Schreiben Sie uns über das Formular. Wir melden uns in Kürze zurück.</p>
-
-      <!-- JS-driven submit to /api/contact (Part 2 will add this endpoint) -->
-      <form class="grid gap-4 max-w-xl" id="contactForm" novalidate>
-        <div class="grid gap-2">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required class="border rounded px-3 py-2">
+    <!-- Hero -->
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-600 text-white"
+    >
+      <!-- Subtle dot pattern overlay -->
+      <div
+        class="absolute inset-0 opacity-[0.07]"
+        style="
+          background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+          background-size: 24px 24px;
+        "
+      ></div>
+      <div class="relative container mx-auto px-4 py-24 md:py-32 text-center">
+        <div
+          class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-emerald-100 text-sm font-medium px-4 py-1.5 rounded-full mb-7 border border-white/20"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-300"></span>
+          Walldorf &amp; Umkreis 5 km
         </div>
-        <div class="grid gap-2">
-          <label for="email">E-Mail</label>
-          <input id="email" name="email" type="email" required class="border rounded px-3 py-2">
+        <h1
+          class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-3xl mx-auto"
+        >
+          Ihr Familien-Team für Betreuung in Walldorf
+        </h1>
+        <p
+          class="mx-auto max-w-xl text-lg md:text-xl text-emerald-100/90 mb-10 leading-relaxed"
+        >
+          Zuverlässige Haus-, Tier-, Pflanzen- und Kinderbetreuung im Umkreis
+          von 5&nbsp;km. Persönlich, freundlich und lokal.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center gap-2 bg-white text-emerald-800 font-semibold px-7 py-3.5 rounded-full hover:bg-emerald-50 transition-colors shadow-xl shadow-black/20"
+          >
+            Jetzt anfragen
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M3 8h10M9 4l4 4-4 4" />
+            </svg>
+          </a>
+          <a
+            href="#services"
+            class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white font-medium px-7 py-3.5 rounded-full border border-white/25 hover:bg-white/20 transition-colors"
+          >
+            Unsere Leistungen
+          </a>
         </div>
-        <div class="grid gap-2">
-          <label for="message">Nachricht</label>
-          <textarea id="message" name="message" rows="5" required class="border rounded px-3 py-2"></textarea>
+      </div>
+      <!-- Wave divider -->
+      <div class="relative h-14">
+        <svg
+          class="absolute bottom-0 w-full"
+          viewBox="0 0 1440 56"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path d="M0 56L480 18L960 42L1440 6V56H0Z" fill="white" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 px-4 bg-white">
+      <div class="container mx-auto max-w-2xl">
+        <span
+          class="inline-block text-emerald-600 text-xs font-semibold uppercase tracking-widest mb-3"
+          >Wer wir sind</span
+        >
+        <h2 class="text-3xl font-bold text-slate-800 mb-5">Über uns</h2>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Sit &amp; Care ist ein familiengeführtes Angebot aus Walldorf.
+          Gemeinsam als Eltern und Kinder kümmern wir uns zuverlässig und mit
+          Herz um Häuser, Haustiere, Pflanzen und die liebevolle Betreuung von
+          Kindern in unserer Nachbarschaft.
+        </p>
+      </div>
+    </section>
+
+    <!-- Motivation -->
+    <section id="motivation" class="py-16 px-4 bg-slate-50">
+      <div class="container mx-auto">
+        <div
+          class="max-w-2xl bg-white rounded-2xl border border-slate-100 shadow-sm p-8 md:p-10"
+        >
+          <span
+            class="inline-block text-emerald-600 text-xs font-semibold uppercase tracking-widest mb-3"
+            >Unsere Geschichte</span
+          >
+          <h2 class="text-3xl font-bold text-slate-800 mb-5">
+            Warum wir das machen
+          </h2>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Unsere Kinder möchten etwas Eigenes aufbauen und dabei Verantwortung
+            übernehmen. Mit Sit &amp; Care verbinden wir Nützliches mit
+            Sinnvollem: Wir unterstützen Nachbarn und Familien in Walldorf und
+            Umgebung – und die Kinder können sich ein Taschengeld verdienen, um
+            ihren Traum vom Studium im Ausland zu verwirklichen.
+          </p>
         </div>
+      </div>
+    </section>
 
-        <!-- Honeypot -->
-        <div style="position:absolute;left:-5000px;" aria-hidden="true">
-          <input type="text" name="website" tabindex="-1" autocomplete="off">
+    <!-- Services -->
+    <section id="services" class="py-16 px-4 bg-white">
+      <div class="container mx-auto">
+        <div class="text-center mb-12">
+          <span
+            class="inline-block text-emerald-600 text-xs font-semibold uppercase tracking-widest mb-3"
+            >Was wir anbieten</span
+          >
+          <h2 class="text-3xl font-bold text-slate-800">Unsere Leistungen</h2>
+          <p class="mt-2 text-slate-500 text-sm">
+            Servicegebiet: Walldorf und Umgebung (5&nbsp;km)
+          </p>
         </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Haussitting -->
+          <div
+            class="group p-6 rounded-2xl border border-slate-100 bg-white hover:border-emerald-200 hover:shadow-md transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"
+                />
+                <path d="M9 21V12h6v9" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 mb-1.5">
+              Haussitting
+            </h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Regelmäßige Kontrolle, Lüften und Briefkastenleerung – damit Ihr
+              Zuhause gepflegt bleibt.
+            </p>
+          </div>
 
-        <button class="justify-self-start bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" type="submit">Senden</button>
-        <p id="formStatus" class="text-sm text-slate-600"></p>
-      </form>
-    </div>
-  </section>
+          <!-- Tierbetreuung -->
+          <div
+            class="group p-6 rounded-2xl border border-slate-100 bg-white hover:border-emerald-200 hover:shadow-md transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="9" cy="7" r="2" />
+                <circle cx="15" cy="7" r="2" />
+                <circle cx="5" cy="13" r="2" />
+                <circle cx="19" cy="13" r="2" />
+                <path
+                  d="M12 22c-2.5 0-6-2-6-6 0-2 1-3.5 3-4.5 1-.5 2-.5 3-.5s2 0 3 .5c2 1 3 2.5 3 4.5 0 4-3.5 6-6 6z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 mb-1.5">
+              Tierbetreuung
+            </h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Füttern, Spazierengehen und Spielen – Ihre Lieblinge sind bei uns
+              in besten Händen.
+            </p>
+          </div>
 
-  <!-- Footer -->
-  <footer class="py-8 px-4 text-center text-sm border-t bg-white">
-    <div class="container mx-auto">
-      <p>© <span id="year"></span> Sit &amp; Care · Walldorf</p>
-      <p class="mt-2">
-        <a href="/impressum.html" class="underline">Impressum</a>
-        <span class="mx-1">·</span>
-        <a href="/datenschutz.html" class="underline">Datenschutz</a>
-      </p>
-    </div>
-  </footer>
+          <!-- Pflanzenpflege -->
+          <div
+            class="group p-6 rounded-2xl border border-slate-100 bg-white hover:border-emerald-200 hover:shadow-md transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 22V12" />
+                <path d="M12 12C12 12 7 10 7 5a5 5 0 0110 0c0 5-5 7-5 7z" />
+                <path d="M12 12c0 0-3-4-8-3" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 mb-1.5">
+              Pflanzenpflege
+            </h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Gießen von Zimmer- und Balkonpflanzen – damit Ihr Grün auch in
+              Ihrer Abwesenheit gedeiht.
+            </p>
+          </div>
 
-  <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const nav = document.getElementById('nav');
-    menuBtn?.addEventListener('click', () => nav.classList.toggle('hidden'));
+          <!-- Babysitting -->
+          <div
+            class="group p-6 rounded-2xl border border-slate-100 bg-white hover:border-emerald-200 hover:shadow-md transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                <path d="M16 3.13a4 4 0 010 7.75" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 mb-1.5">
+              Babysitting
+            </h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Liebevolle Betreuung Ihrer Kinder für kurze oder längere Zeiträume
+              – zuverlässig und herzlich.
+            </p>
+          </div>
 
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+          <!-- Schlüsselservice -->
+          <div
+            class="group p-6 rounded-2xl border border-slate-100 bg-white hover:border-emerald-200 hover:shadow-md transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-100 transition-colors"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="8" cy="15" r="5" />
+                <path d="M15.5 8.5L22 2" />
+                <path d="M18 5l2 2" />
+                <path d="M20 3l2 2" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 mb-1.5">
+              Schlüsselservice
+            </h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Sichere Übergabe und verantwortungsvolle Verwahrung Ihres
+              Schlüssels.
+            </p>
+          </div>
 
-    // Contact form handler (POST -> /api/contact)
-    const form = document.getElementById('contactForm');
-    const statusEl = document.getElementById('formStatus');
+          <!-- CTA card -->
+          <div
+            class="p-6 rounded-2xl bg-emerald-700 text-white flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="text-sm font-semibold mb-2">Interesse geweckt?</h3>
+              <p class="text-sm text-emerald-100 leading-relaxed">
+                Wir freuen uns auf Ihre Nachricht und melden uns schnell zurück.
+              </p>
+            </div>
+            <a
+              href="#contact"
+              class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-white underline-offset-4 hover:underline"
+            >
+              Kontakt aufnehmen
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      statusEl.textContent = 'Senden …';
+    <!-- Contact -->
+    <section id="contact" class="py-16 px-4 bg-slate-50">
+      <div class="container mx-auto">
+        <div class="max-w-lg">
+          <span
+            class="inline-block text-emerald-600 text-xs font-semibold uppercase tracking-widest mb-3"
+            >Schreiben Sie uns</span
+          >
+          <h2 class="text-3xl font-bold text-slate-800 mb-2">Kontakt</h2>
+          <p class="text-slate-500 mb-8">
+            Schreiben Sie uns über das Formular. Wir melden uns in Kürze zurück.
+          </p>
 
-      const payload = {
-        name: form.name.value.trim(),
-        email: form.email.value.trim(),
-        message: form.message.value.trim(),
-        honeypot: form.website.value.trim()
-      };
+          <!-- JS-driven submit to /api/contact -->
+          <form class="space-y-5" id="contactForm" novalidate>
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-slate-700 mb-1.5"
+                >Name</label
+              >
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                autocomplete="name"
+                class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder-slate-400 outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-shadow"
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-slate-700 mb-1.5"
+                >E-Mail</label
+              >
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder-slate-400 outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-shadow"
+              />
+            </div>
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-slate-700 mb-1.5"
+                >Nachricht</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 bg-white placeholder-slate-400 outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-shadow resize-none"
+              ></textarea>
+            </div>
 
-      // Simple front-end validation
-      if (!payload.name || !payload.email || !payload.message) {
-        statusEl.textContent = 'Bitte alle Felder ausfüllen.';
-        return;
-      }
+            <!-- Honeypot -->
+            <div style="position: absolute; left: -5000px" aria-hidden="true">
+              <input
+                type="text"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
 
-      try {
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(payload)
-        });
+            <button
+              type="submit"
+              class="inline-flex items-center gap-2 bg-emerald-700 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-emerald-800 active:scale-[0.98] transition-all"
+            >
+              Nachricht senden
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+            <p id="formStatus" class="text-sm text-slate-500 mt-1"></p>
+          </form>
+        </div>
+      </div>
+    </section>
 
-        if (res.ok) {
-          statusEl.textContent = 'Danke! Wir melden uns in Kürze.';
-          form.reset();
-        } else {
-          statusEl.textContent = 'Es gab ein Problem. Bitte versuchen Sie es später erneut.';
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-slate-900 text-slate-400">
+      <div
+        class="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm"
+      >
+        <a href="/" class="text-white font-semibold">Sit &amp; Care</a>
+        <p>© <span id="year"></span> Sit &amp; Care · Walldorf</p>
+        <p class="flex gap-5">
+          <a href="/impressum.html" class="hover:text-white transition-colors"
+            >Impressum</a
+          >
+          <a href="/datenschutz.html" class="hover:text-white transition-colors"
+            >Datenschutz</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileNav = document.getElementById("mobileNav");
+      menuBtn?.addEventListener("click", () =>
+        mobileNav.classList.toggle("hidden"),
+      );
+
+      // Close mobile menu when a link is selected
+      mobileNav
+        ?.querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => mobileNav.classList.add("hidden")),
+        );
+
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Contact form handler (POST -> /api/contact)
+      const form = document.getElementById("contactForm");
+      const statusEl = document.getElementById("formStatus");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        statusEl.textContent = "Senden …";
+
+        const payload = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          message: form.message.value.trim(),
+          honeypot: form.website.value.trim(),
+        };
+
+        // Simple front-end validation
+        if (!payload.name || !payload.email || !payload.message) {
+          statusEl.textContent = "Bitte alle Felder ausfüllen.";
+          return;
         }
-      } catch (err) {
-        statusEl.textContent = 'Netzwerkfehler. Bitte später erneut versuchen.';
-      }
-    });
-  </script>
-</body>
+
+        try {
+          const res = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+
+          if (res.ok) {
+            statusEl.textContent = "Danke! Wir melden uns in Kürze.";
+            form.reset();
+          } else {
+            statusEl.textContent =
+              "Es gab ein Problem. Bitte versuchen Sie es später erneut.";
+          }
+        } catch (err) {
+          statusEl.textContent =
+            "Netzwerkfehler. Bitte später erneut versuchen.";
+        }
+      });
+    </script>
+  </body>
 </html>
